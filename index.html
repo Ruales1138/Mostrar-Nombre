@@ -11,21 +11,29 @@
     <label for="lastName">Apellido:</label>
     <input type="text" id="lastName">
 
-    <button onclick="showFullName()">Mostrar</button>
+    <button onclick="showFullName(); show7Days(); show5Days();">Mostrar</button>
 
     <p id="fullName"></p>
 
     <hr>
 
-    <label for="day1">Dia 1:</label>
-    <input type="number" id="day1">
+    <label for="number">Day 1:</label>
+    <input type="number" id="number" class="numbers"/>
+    <label for="number">Day 2:</label>
+    <input type="number" id="number" class="numbers"/>
+    <label for="number">Day 3:</label>
+    <input type="number" id="number" class="numbers"/>
+    <label for="number">Day 4:</label>
+    <input type="number" id="number" class="numbers"/>
+    <label for="number">Day 5:</label>
+    <input type="number" id="number" class="numbers"/>
+    <label for="number">Day 6:</label>
+    <input type="number" id="number" class="numbers"/>
+    <label for="number">Day 7:</label>
+    <input type="number" id="number" class="numbers"/>
 
-    <label for="day2">Dia 2:</label>
-    <input type="number" id="day2">
-
-    <button onclick="showTotalDays()">Mostrar</button>
-
-    <p id="totalDays"></p>
+    <p id="5days"></p>
+    <p id="7days"></p>
 
     <script>
       function showFullName() {
@@ -36,12 +44,26 @@
         document.getElementById("fullName").innerText = fullName;
       }
 
-      function showTotalDays() {
-        var day1 = parseInt(document.getElementById("day1").value);
-        var day2 = parseInt(document.getElementById("day2").value);
+      function show7Days() {
+        var sum = 0;
+        var inputs = document.getElementsByClassName("numbers");
 
-        var totalDays = day1 + day2;
-        document.getElementById("totalDays").innerText = totalDays;
+        for (let i = 0; i < inputs.length; i++) {
+          sum += Number(inputs[i].value)
+        }
+
+        document.getElementById("7days").innerText = "Vasos de agua totales: " + sum;
+      }
+
+      function show5Days() {
+        var sum = 0;
+        var inputs = document.getElementsByClassName("numbers");
+
+        for (let i = 0; i < 5; i++) {
+          sum += Number(inputs[i].value)
+        }
+
+        document.getElementById("5days").innerText = "Vasos de agua en 5 dias: " + sum;
       }
     </script>
   </body>
