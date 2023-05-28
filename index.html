@@ -15,6 +15,18 @@
 
     <p id="fullName"></p>
 
+    <hr>
+
+    <label for="day1">Dia 1:</label>
+    <input type="number" id="day1">
+
+    <label for="day2">Dia 2:</label>
+    <input type="number" id="day2">
+
+    <button onclick="showTotalDays()">Mostrar</button>
+
+    <p id="totalDays"></p>
+
     <script>
       function showFullName() {
         var name = document.getElementById("name").value;
@@ -22,6 +34,14 @@
 
         var fullName = "Nombre Completo: " + name + " " + lastName;
         document.getElementById("fullName").innerText = fullName;
+      }
+
+      function showTotalDays() {
+        var day1 = parseInt(document.getElementById("day1").value);
+        var day2 = parseInt(document.getElementById("day2").value);
+
+        var totalDays = day1 + day2;
+        document.getElementById("totalDays").innerText = totalDays;
       }
     </script>
   </body>
