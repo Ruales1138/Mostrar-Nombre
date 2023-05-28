@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mostrar Nombre Completo</title>
+  </head>
+
+  <body>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name">
+
+    <label for="lastName">Apellido:</label>
+    <input type="text" id="lastName">
+
+    <button onclick="showFullName()">Mostrar</button>
+
+    <p id="fullName"></p>
+
+    <script>
+      function showFullName() {
+        var name = document.getElementById("name").value;
+        var lastName = document.getElementById("lastName").value;
+
+        var fullName = "Nombre Completo: " + name + " " + lastName;
+        document.getElementById("fullName").innerText = fullName;
+      }
+    </script>
+  </body>
+</html>
