@@ -23,6 +23,18 @@
     margin-top: 30px;
 }
 
-.clearfix{
+.clearfix {
     clear:both
+}
+
+.containerDays {
+    margin-top: 15px;
+}
+
+.containerDays label {
+    position: absolute;
+}
+
+.containerDays input {
+    margin-left: 65px;
 }
