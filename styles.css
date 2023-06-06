@@ -1,12 +1,28 @@
 .container {
-    margin-top: 30px;
+    margin-left: 25%;
+}
+
+.containerName {
+    float: left;
 }
 
 .inputs {
-    margin-left: 20%;
     margin-top: 15px;
 }
 
+.inputs label {
+    position: absolute;
+}
+
+.inputs input {
+    margin-left: 65px;
+}
+
 .button {
-    float: right;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.clearfix{
+    clear:both
 }
